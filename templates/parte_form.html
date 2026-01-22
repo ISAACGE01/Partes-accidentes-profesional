@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECLARACIÓN AMISTOSA DE ACCIDENTE GAG SEGUROS</title>
+    <style>
+        /* Estilos base */
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 5px;
+            background-color: #f8f9fa;
+            font-size: 10px;
+            line-height: 1.2;
+        }
+        .parte-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border: 1px solid #d1d5db;
+            background: white;
+        }
+        h1 {
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 5px;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 8px;
+            font-size: 9px;
+            border: 1px solid #d1d5db;
+        }
+        td, th {
+            border: 1px solid #d1d5db;
+            padding: 4px 3px;
+            vertical-align: top;
+            text-align: left;
+            background-color: white;
+        }
+        .section-title {
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            padding: 5px;
+            margin: 8px 0 4px 0;
+            border: 1px solid #1e3a8a;
+            font-size: 10px;
+            border-radius: 4px;
+        }
+        .subtitle {
+            font-weight: 600;
+            margin: 5px 0 3px 0;
+            color: #1e40af;
+            font-size: 9px;
+            border-left: 3px solid #3b82f6;
+            padding-left: 5px;
+            background-color: #f0f7ff;
+            padding: 4px 5px;
+            border-radius: 2px;
+        }
+        .input-field {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #9ca3af;
+            padding: 3px;
+            margin: 1px 0;
+            background: transparent;
+            font-size: 9px;
+            transition: border-color 0.2s;
+        }
+        .input-field:focus {
+            border-bottom-color: #3b82f6;
+            outline: none;
+            background-color: #f0f7ff;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 1px 0;
+            gap: 8px;
+        }
+        .checkbox-group input {
+            accent-color: #3b82f6;
+        }
+        .vehicle-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+        .vehicle-column {
+            flex: 1;
+            min-width: 0;
+            background: white;
+            padding: 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .signature-area {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            gap: 10px;
+        }
+        .signature-box {
+            width: 48%;
+            border-top: 2px solid #3b82f6;
+            padding-top: 8px;
+            text-align: center;
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 12px;
+        }
+        button {
+            padding: 7px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 10px;
+            margin: 3px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+        .btn-success {
+            background: linear-gradient(to bottom, #15376dff, #1d4ed8);
+            color: white;
+        }
+        .btn-success:hover {
+            background: linear-gradient(to bottom, #0c3285ff, #1d4ed8);
+        }
+        .btn-danger {
+            background: linear-gradient(to bottom, #15376dff, #1d4ed8);
+            color: white;
+        }
+        .btn-danger:hover {
+            background: linear-gradient(to bottom, #0c3285ff, #1d4ed8);
+        }
+        .btn-primary {
+            background: linear-gradient(to bottom, #15376dff, #1d4ed8);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(to bottom, #0c3285ff, #1d4ed8);
+        }
+        textarea {
+            width: 100%;
+            height: 40px;
+            padding: 5px;
+            border: 1px solid #d1d5db;
+            resize: vertical;
+            font-size: 9px;
+            border-radius: 4px;
+            background: #f9fafb;
+            transition: border-color 0.2s;
+        }
+        textarea:focus {
+            border-color: #3b82f6;
+            outline: none;
+            background: white;
+        }
+        .drawing-container {
+            position: relative;
+            margin: 5px 0;
+        }
+        .drawing-instructions {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #6b7280;
+            text-align: center;
+            pointer-events: none;
+            z-index: 1;
+            background: rgba(255,255,255,0.95);
+            padding: 6px;
+            border-radius: 4px;
+            width: 80%;
+            font-size: 9px;
+            border: 1px dashed #d1d5db;
+        }
+        .drawing-instructions.hidden {
+            display: none;
+        }
+        .canvas-container {
+            position: relative;
+        }
+        .canvas-controls {
+            margin-top: 5px;
+            text-align: center;
+        }
+        .canvas-controls button {
+            padding: 3px 6px;
+            font-size: 9px;
+            margin: 0 2px;
+        }
+        .color-palette {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0;
+            gap: 4px;
+        }
+
+        .parrafo_datos_empresa {
+            font-size: 13px;
+            color: #af1e1eff;
+
+        }
+        .color-option {
+            width: 16px;
+            height: 16px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+        .color-option.active {
+            border-color: #3b82f6;
+            transform: scale(1.2);
+        }
+        .tool-active {
+            background: linear-gradient(to bottom, #3b82f6, #2563eb) !important;
+            color: white !important;
+        }
+        .vehicle-selector {
+            display: flex;
+            justify-content: flex-start;
+            gap: 8px;
+            margin: 5px 0;
+        }
+        .vehicle-option {
+            width: 55px;
+            height: 26px;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            font-weight: 600;
+            font-size: 9px;
+            color: #4b5563;
+            transition: all 0.2s ease;
+        }
+        .vehicle-option.active {
+            border-color: #3b82f6;
+            background: linear-gradient(to bottom, #eff6ff, #dbeafe);
+            color: #1e40af;
+            box-shadow: 0 1px 3px rgba(59, 130, 246, 0.3);
+        }
+        .impact-canvas {
+            border: 1px dashed #d1d5db;
+            background: #f9fafb;
+            width: 100%;
+            height: 75px;
+            border-radius: 4px;
+        }
+        .parte-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #000000ff;
+            border-top: 1px solid #000000ff;
+            border-right: 1px solid #000000ff;
+            border-left: 1px solid #000000ff;
+            padding-bottom: 8px;
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+           
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .header-content {
+            flex: 1;
+            text-align: center;
+        }
+        .parte-header h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1141c7ff;
+        }
+        .parte-header p {
+            margin: 5px 0;
+            font-size: 10px;
+            color: #030507ff;
+        }
+        .logo-container {
+            width: 110px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: #9ca3af;
+            font-size: 8px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            padding-right: 20px;
+        }
+        .form-section {
+            margin-bottom: 8px;
+        }
+        .testigos-section {
+            margin: 10px 0;
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+        .testigos-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .testigo-line {
+            display: flex;
+            gap: 10px;
+        }
+        .testigo-line input {
+            flex: 1;
+        }
+
+        /* Estilo para circunstancias mejoradas - EN LÍNEA */
+        .circunstancias-mejoradas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .circunstancias-columna-mejorada {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .circunstancias-fila {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 6px;
+            border-bottom: 1px solid #f3f4f6;
+            min-height: 22px;
+            background: #fafafa;
+            border-radius: 3px;
+        }
+        
+        .circunstancias-fila label {
+            flex: 1;
+            font-size: 8px;
+            text-align: center;
+            line-height: 1.1;
+            margin: 0 4px;
+        }
+        
+        .circunstancias-fila .checkbox-group {
+            margin: 0;
+            width: 20px;
+            justify-content: center;
+        }
+        
+        .circunstancias-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 6px;
+            background-color: #f0f7ff;
+            font-weight: 600;
+            border-bottom: 1px solid #3b82f6;
+            font-size: 9px;
+            border-radius: 3px;
+        }
+        
+        .circunstancias-header span {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* ÚLTIMA FILA ESPECIAL - OCUPA AMBAS COLUMNAS */
+        .circunstancias-fila-especial {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 6px;
+            border-bottom: 1px solid #f3f4f6;
+            min-height: 22px;
+            grid-column: 1 / -1;
+            grid-column: justify
+            text-align: center;
+            margin-top: 4px;
+            background-color: #fafbfdff;
+            border-radius: 3px;
+        }
+        
+        .circunstancias-fila-especial label {
+            flex: 1;
+            font-size: 9px;
+            text-align: center;
+            line-height: 1.1;
+            margin: 0 4px;
+        }
+        
+        .circunstancias-fila-especial .checkbox-group {
+            margin: 0;
+            width: 20px;
+            justify-content: center;
+        }
+
+        /* Controles de tamaño para las X */
+        .size-controls {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 6px;
+            margin: 5px 0;
+        }
+        
+        .size-controls label {
+            font-size: 9px;
+            font-weight: 600;
+        }
+        
+        .size-slider {
+            width: 70px;
+        }
+
+        /* Estilo para preguntas Sí/No en línea */
+        .inline-yes-no {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 5px 0;
+        }
+        
+        .inline-yes-no label {
+            font-size: 9px;
+            white-space: nowrap;
+        }
+        
+        .inline-yes-no .checkbox-group {
+            margin: 0;
+        }
+
+        /* Nuevos estilos para el croquis más grande */
+        .croquis-container {
+            width: 100%;
+            height: 150px;
+            border: 1px dashed #d1d5db;
+            border-radius: 4px;
+            background: #f9fafb;
+            overflow: hidden;
+        }
+        
+        /* Ajustes para mejor distribución en impresión */
+        .compact-section {
+            margin-bottom: 5px;
+        }
+        
+        .compact-table {
+            margin-bottom: 5px;
+        }
+        
+        .compact-table td, .compact-table th {
+            padding: 2px 3px;
+        }
+
+        /* Media Queries para móvil */
+        @media (max-width: 768px) {
+            body {
+                padding: 3px;
+            }
+            
+            .parte-container {
+                padding: 8px;
+            }
+            
+            .vehicle-section {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .vehicle-column {
+                width: 100%;
+            }
+            
+            .signature-area {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .signature-box {
+                width: 100%;
+            }
+            
+            .impact-canvas {
+                height: 65px;
+            }
+            
+            .testigo-line {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            table {
+                font-size: 8px;
+            }
+            
+            .canvas-controls {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 3px;
+            }
+            
+            .canvas-controls button {
+                padding: 4px 6px;
+                font-size: 8px;
+            }
+            
+            .circunstancias-mejoradas {
+                grid-template-columns: 1fr;
+            }
+            
+            .circunstancias-fila label {
+                font-size: 7px;
+            }
+            
+            .circunstancias-fila-especial {
+                grid-column: 1;
+            }
+            
+            .vehicle-selector {
+                justify-content: center;
+            }
+            
+            .size-controls {
+                justify-content: center;
+            }
+            
+            .parte-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                margin-top: 8px;
+            }
+        }
+
+        /* =========================================== */
+        /* ========== ESTILOS PARA IMPRESIÓN ========= */
+        /* =========================================== */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+                font-size: 6px !important;
+                line-height: 1.0;
+                width: 100%;
+                height: auto;
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .parte-container {
+                box-shadow: none;
+                padding: 4px !important;
+                border: 1px solid #000;
+                max-width: 100%;
+                margin: 0;
+                width: 100%;
+                background: white;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                transform: none !important;
+                height: auto;
+            }
+            
+            .no-print {
+                display: none !important;
+            }
+            
+            .input-field {
+                border: none !important;
+                border-bottom: 1px solid #000 !important;
+                background: transparent !important;
+                font-size: 6px !important;
+                padding: 1px !important;
+                margin: 0 !important;
+            }
+            
+            .drawing-instructions {
+                display: none !important;
+            }
+            
+            .color-palette {
+                display: none !important;
+            }
+            
+            .vehicle-selector {
+                display: none !important;
+            }
+            
+            button {
+                display: none !important;
+            }
+            
+            .canvas-controls {
+                display: none !important;
+            }
+            
+            .size-controls {
+                display: none !important;
+            }
+            
+            /* Ajustes para evitar cortes */
+            .vehicle-section, .signature-area, .drawing-container {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            table {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                font-size: 6px !important;
+                margin-bottom: 3px !important;
+            }
+            
+            /* Colores para impresión */
+            .section-title {
+                background: #e5e7eb !important;
+                color: #000 !important;
+                border: 1px solid #000 !important;
+                font-size: 7px !important;
+                padding: 3px !important;
+                margin: 4px 0 2px 0 !important;
+            }
+            
+            .subtitle {
+                color: #000 !important;
+                border-left: 2px solid #000 !important;
+                font-size: 6px !important;
+                margin: 3px 0 1px 0 !important;
+                padding-left: 3px !important;
+                background: #f8fafc !important;
+                padding: 2px 3px !important;
+            }
+            
+            .vehicle-column, .testigos-section {
+                border: 1px solid #000 !important;
+                background: white !important;
+                padding: 3px !important;
+            }
+            
+            .impact-canvas, #croquis, #signatureA, #signatureB {
+                border: 1px solid #000 !important;
+                background: white !important;
+            }
+            
+            /* Checkboxes visibles en impresión */
+            .checkbox-group input[type="checkbox"] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 5px;
+                height: 5px;
+                border: 1px solid #000;
+                display: inline-block;
+                position: relative;
+                margin-right: 1px;
+            }
+            
+            .checkbox-group input[type="checkbox"]:checked::before {
+                content: "X";
+                position: absolute;
+                top: -3px;
+                left: 0px;
+                font-size: 5px;
+                color: #000;
+            }
+            
+            /* Reducir espacios para que quepa en una página */
+            .parte-header {
+                padding: 2px !important;
+                margin-bottom: 4px !important;
+            }
+            
+            .parte-header h2 {
+                font-size: 9px !important;
+            }
+            
+            .parte-header p {
+                font-size: 5px !important;
+                margin: 1px 0 !important;
+            }
+            
+            .vehicle-column {
+                padding: 2px !important;
+            }
+            
+            .circunstancias-mejoradas {
+                margin: 4px 0 !important;
+                gap: 2px !important;
+            }
+            
+            .circunstancias-fila {
+                padding: 2px 3px !important;
+                min-height: 14px !important;
+            }
+            
+            .circunstancias-fila label {
+                font-size: 5px !important;
+            }
+            
+            .circunstancias-header {
+                padding: 2px 3px !important;
+                font-size: 6px !important;
+            }
+            
+            .drawing-container {
+                margin: 2px 0 !important;
+            }
+            
+            #croquis {
+                height: 80px !important;
+            }
+            
+            .signature-area {
+                margin-top: 4px !important;
+                flex-direction: row !important;
+            }
+            
+            .signature-box {
+                padding: 2px !important;
+                width: 48% !important;
+            }
+            
+            #signatureA, #signatureB {
+                height: 25px !important;
+            }
+            
+            /* Ajustes adicionales para reducir tamaño */
+            .form-section {
+                margin-bottom: 3px !important;
+            }
+            
+            .testigos-section {
+                margin: 4px 0 !important;
+                padding: 3px !important;
+            }
+            
+            .btn-container {
+                display: none !important;
+            }
+            
+            textarea {
+                height: 18px !important;
+                font-size: 6px !important;
+                padding: 1px !important;
+            }
+            
+            td, th {
+                padding: 2px 1px !important;
+            }
+            
+            /* Ajuste específico para las circunstancias especiales */
+            .circunstancias-fila-especial {
+                min-height: 12px !important;
+                padding: 2px 3px !important;
+            }
+            
+            .circunstancias-fila-especial label {
+                font-size: 5px !important;
+            }
+            
+            /* Reducir tamaño de los canvas de vehículos */
+            .impact-canvas {
+                height: 35px !important;
+            }
+            
+            /* Reorganizar secciones para mejor flujo */
+            .vehicle-section {
+                flex-direction: row !important;
+                margin-bottom: 5px !important;
+                gap: 5px !important;
+            }
+            
+            /* Eliminar elementos innecesarios en impresión */
+            .parte-header p:last-child {
+                display: none !important;
+            }
+            
+            .logo-container {
+                display: none !important;
+            }
+            
+            /* Asegurar que todo quepa en una página */
+            html, body {
+                height: 100%;
+                overflow: visible !important;
+            }
+            
+            /* Optimizar espacios verticales */
+            .section-title {
+                margin: 3px 0 1px 0 !important;
+            }
+            
+            .subtitle {
+                margin: 2px 0 1px 0 !important;
+            }
+            
+            /* Reducir espacios en inputs y tablas */
+            .testigo-line {
+                gap: 5px !important;
+            }
+            
+            .testigo-line input {
+                font-size: 6px !important;
+            }
+            
+            .inline-yes-no {
+                gap: 8px !important;
+                margin: 2px 0 !important;
+            }
+            
+            .inline-yes-no label {
+                font-size: 6px !important;
+            }
+        }
+
+        /* Clase para ocultar elementos en PDF */
+        .no-pdf {
+            /* Se mantiene para uso general */
+        }
+    </style>
+    <!-- Incluir html2canvas y jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="parte-container" id="content-to-print">
+        <!-- Mantengo todo el HTML anterior igual -->
+        <div class="parte-header">
+            <div class="logo-container">
+                 <img src="/static/images/gag1.jpg" alt="Tu Logo">
+            </div>
+            <div class="header-content">
+                <h2>DECLARACIÓN AMISTOSA DE ACCIDENTE SEGUROS GAG</h2>
+                <h3 class="parrafo_datos_empresa">Tel: 695 170 713, Fijo: 958 960 209, Gmail: gag.seguros@gmail.com.
+                </h3>
+                <p>Rellene este documento a ser posible con letra mayúscula. Conserve una copia.</p>
+            </div>
+            <div style="width: 60px;"></div>
+        </div>
+        
+        <!-- Sección 1-3: Fecha, Hora, Localización y Víctimas -->
+        <div class="form-section compact-section">
+            <table class="compact-table">
+                <tr>
+                    <td width="20%">1. Fecha del Accidente</td>
+                    <td width="15%">Hora</td>
+                    <td width="20%">2. Localización País</td>
+                    <td width="30%">Lugar</td>
+                    <td width="15%">3. Víctimas incluso leve(s)</td>
+                </tr>
+                <tr>
+                    <td><input type="date" class="input-field" name="fecha_accidente" required></td>
+                    <td><input type="time" class="input-field" name="hora_accidente" required></td>
+                    <td><input type="text" class="input-field" name="pais_accidente" value="España" required></td>
+                    <td><input type="text" class="input-field" name="lugar_accidente" placeholder="Dirección del accidente" required></td>
+                    <td>
+                        <div class="inline-yes-no">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="victimas-no" name="victimas" value="false">
+                                <label for="victimas-no">no</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="victimas-si" name="victimas" value="true">
+                                <label for="victimas-si">sí</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Sección 4: Testigos -->
+        <div class="section-title">4. Testigos</div>
+        <div class="testigos-section compact-section">
+            <div class="testigos-inputs">
+                <div class="testigo-line">
+                    <input type="text" class="input-field" name="testigo1_nombre" placeholder="Nombre">
+                    <input type="text" class="input-field" name="testigo1_direccion" placeholder="Dirección">
+                    <input type="text" class="input-field" name="testigo1_telefono" placeholder="Teléfono">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Secciones para Vehículo A y B -->
+        <div class="vehicle-section">
+            <!-- Vehículo A -->
+            <div class="vehicle-column">
+                <div class="section-title">Vehículo A</div>
+                
+                <div class="subtitle">5. Asegurado (véase póliza de seguro)</div>
+                <table class="compact-table">
+                    <tr><td>NOMBRE:</td><td><input type="text" class="input-field" name="asegurado_a_nombre"></td></tr>
+                    <tr><td>Apellidos:</td><td><input type="text" class="input-field" name="asegurado_a_apellidos"></td></tr>
+                    <tr><td>Dirección:</td><td><input type="text" class="input-field" name="asegurado_a_direccion"></td></tr>
+                    <tr><td>Código Postal:</td><td><input type="text" class="input-field" name="asegurado_a_codigo_postal"></td></tr>
+                    <tr><td>País:</td><td><input type="text" class="input-field" name="asegurado_a_pais" value="España"></td></tr>
+                    <tr><td>Tel. o E-mail:</td><td><input type="text" class="input-field" name="asegurado_a_contacto"></td></tr>
+                </table>
+                
+                <div class="subtitle">6. Vehículo</div>
+                <table class="compact-table">
+                    <tr><td>Vehículo a motor</td><td><input type="text" class="input-field" name="vehiculo_a_tipo"></td></tr>
+                    <tr><td>Marca, modelo</td><td><input type="text" class="input-field" name="vehiculo_a_marca_modelo"></td></tr>
+                    <tr><td>Matrícula (o bastidor)</td><td><input type="text" class="input-field" name="vehiculo_a_matricula"></td></tr>
+                    <tr><td>País de matrícula</td><td><input type="text" class="input-field" name="vehiculo_a_pais_matricula" value="España"></td></tr>
+                </table>
+                
+                <div class="subtitle">7. Aseguradora (véase póliza de seguro)</div>
+                <table class="compact-table">
+                    <tr><td>NOMBRE:</td><td><input type="text" class="input-field" name="aseguradora_a_nombre"></td></tr>
+                    <tr><td>N° de póliza:</td><td><input type="text" class="input-field" name="aseguradora_a_poliza"></td></tr>
+                    <tr><td>N° de Carta Verde:</td><td><input type="text" class="input-field" name="aseguradora_a_carta_verde"></td></tr>
+                    <tr><td>Agencia (oficina o corredor):</td><td><input type="text" class="input-field" name="aseguradora_a_agencia"></td></tr>
+                </table>
+                <div class="inline-yes-no">
+                    <label>¿Los daños propios del vehículo están asegurados?</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="danos-asegurados-a-no" name="vehiculo_a_danos_asegurados" value="false">
+                        <label for="danos-asegurados-a-no">no</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="danos-asegurados-a-si" name="vehiculo_a_danos_asegurados" value="true">
+                        <label for="danos-asegurados-a-si">sí</label>
+                    </div>
+                </div>
+                
+                <div class="subtitle">8. Conductor (ver permiso de conducir)</div>
+                <table class="compact-table">
+                    <tr><td>NOMBRE:</td><td><input type="text" class="input-field" name="conductor_a_nombre"></td></tr>
+                    <tr><td>Apellidos:</td><td><input type="text" class="input-field" name="conductor_a_apellidos"></td></tr>
+                    <tr><td>Fecha de nacimiento:</td><td><input type="date" class="input-field" name="conductor_a_fecha_nacimiento"></td></tr>
+                    <tr><td>Dirección:</td><td><input type="text" class="input-field" name="conductor_a_direccion"></td></tr>
+                    <tr><td>Tel. o E-mail:</td><td><input type="text" class="input-field" name="conductor_a_contacto"></td></tr>
+                    <tr><td>Permiso de conducir nº</td><td><input type="text" class="input-field" name="conductor_a_permiso"></td></tr>
+                </table>
+                
+                <div class="subtitle">9. Indicar el punto de choque inicial con una X</div>
+                
+                <!-- Selector de tipo de vehículo A -->
+                <div class="vehicle-selector no-print">
+                    <div class="vehicle-option active" data-vehicle="car" onclick="selectVehicle('puntoChoqueA', 'car')">
+                        COCHE
+                    </div>
+                    <div class="vehicle-option" data-vehicle="motorcycle" onclick="selectVehicle('puntoChoqueA', 'motorcycle')">
+                        MOTO
+                    </div>
+                    <div class="vehicle-option" data-vehicle="other" onclick="selectVehicle('puntoChoqueA', 'other')">
+                        OTRO
+                    </div>
+                </div>
+                
+                <!-- Control de tamaño para las X -->
+                <div class="size-controls no-print">
+                    <label>Tamaño de X:</label>
+                    <input type="range" class="size-slider" id="sizeSliderA" min="3" max="20" value="5" onchange="updateXSize('puntoChoqueA', this.value)">
+                    <span id="sizeValueA">5px</span>
+                </div>
+                
+                <div class="drawing-container">
+                    <div class="canvas-container">
+                        <canvas id="puntoChoqueA" width="300" height="75" class="impact-canvas"></canvas>
+                    </div>
+                    <div class="canvas-controls no-print">
+                        <button type="button" class="btn-danger" onclick="clearCanvas('puntoChoqueA')">Limpiar X</button>
+                        <button type="button" class="btn-success" onclick="activateTool('puntoChoqueA', 'x')">Añadir X</button>
+                    </div>
+                </div>
+                
+                <div class="subtitle">10. Daños apreciados al vehículo A:</div>
+                <textarea class="input-field" name="vehiculo_a_danos" placeholder="Describa los daños..."></textarea>
+            </div>
+            
+            <!-- Vehículo B -->
+            <div class="vehicle-column">
+                <div class="section-title">Vehículo B</div>
+                
+                <div class="subtitle">11. Asegurado (véase póliza de seguro)</div>
+                <table class="compact-table">
+                    <tr><td>NOMBRE:</td><td><input type="text" class="input-field" name="asegurado_b_nombre"></td></tr>
+                    <tr><td>Apellidos:</td><td><input type="text" class="input-field" name="asegurado_b_apellidos"></td></tr>
+                    <tr><td>Dirección:</td><td><input type="text" class="input-field" name="asegurado_b_direccion"></td></tr>
+                    <tr><td>Código Postal:</td><td><input type="text" class="input-field" name="asegurado_b_codigo_postal"></td></tr>
+                    <tr><td>País:</td><td><input type="text" class="input-field" name="asegurado_b_pais" value="España"></td></tr>
+                    <tr><td>Tel. o E-mail:</td><td><input type="text" class="input-field" name="asegurado_b_contacto"></td></tr>
+                </table>
+                
+                <div class="subtitle">12. Vehículo</div>
+                <table class="compact-table">
+                    <tr><td>Vehículo a motor</td><td><input type="text" class="input-field" name="vehiculo_b_tipo"></td></tr>
+                    <tr><td>Marca, modelo</td><td><input type="text" class="input-field" name="vehiculo_b_marca_modelo"></td></tr>
+                    <tr><td>Matrícula (o bastidor)</td><td><input type="text" class="input-field" name="vehiculo_b_matricula"></td></tr>
+                    <tr><td>País de matrícula</td><td><input type="text" class="input-field" name="vehiculo_b_pais_matricula" value="España"></td></tr>
+                </table>
+                
+                <div class="subtitle">13. Aseguradora (véase póliza de seguro)</div>
+                <table class="compact-table">
+                    <tr><td>NOMBRE:</td><td><input type="text" class="input-field" name="aseguradora_b_nombre"></td></tr>
+                    <tr><td>N° de póliza:</td><td><input type="text" class="input-field" name="aseguradora_b_poliza"></td></tr>
+                    <tr><td>N° de Carta Verde:</td><td><input type="text" class="input-field" name="aseguradora_b_carta_verde"></td></tr>
+                    <tr><td>Agencia (oficina o corredor):</td><td><input type="text" class="input-field" name="aseguradora_b_agencia"></td></tr>
+                </table>
+                <div class="inline-yes-no">
+                    <label>¿Los daños propios del vehículo están asegurados?</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="danos-asegurados-b-no" name="vehiculo_b_danos_asegurados" value="false">
+                        <label for="danos-asegurados-b-no">no</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="danos-asegurados-b-si" name="vehiculo_b_danos_asegurados" value="true">
+                        <label for="danos-asegurados-b-si">sí</label>
+                    </div>
+                </div>
+                
+                <div class="subtitle">14. Conductor (ver permiso de conducir)</div>
+                <table class="compact-table">
+                    <tr><td>NOMBRE:</td><td><input type="text" class="input-field" name="conductor_b_nombre"></td></tr>
+                    <tr><td>Apellidos:</td><td><input type="text" class="input-field" name="conductor_b_apellidos"></td></tr>
+                    <tr><td>Fecha de nacimiento:</td><td><input type="date" class="input-field" name="conductor_b_fecha_nacimiento"></td></tr>
+                    <tr><td>Dirección:</td><td><input type="text" class="input-field" name="conductor_b_direccion"></td></tr>
+                    <tr><td>Tel. o E-mail:</td><td><input type="text" class="input-field" name="conductor_b_contacto"></td></tr>
+                    <tr><td>Permiso de conducir nº</td><td><input type="text" class="input-field" name="conductor_b_permiso"></td></tr>
+                </table>
+                
+                <div class="subtitle">15. Indicar el punto de choque inicial con una X</div>
+                
+                <!-- Selector de tipo de vehículo B -->
+                <div class="vehicle-selector no-print">
+                    <div class="vehicle-option active" data-vehicle="car" onclick="selectVehicle('puntoChoqueB', 'car')">
+                        COCHE
+                    </div>
+                    <div class="vehicle-option" data-vehicle="motorcycle" onclick="selectVehicle('puntoChoqueB', 'motorcycle')">
+                        MOTO
+                    </div>
+                    <div class="vehicle-option" data-vehicle="other" onclick="selectVehicle('puntoChoqueB', 'other')">
+                        OTRO
+                    </div>
+                </div>
+                
+                <!-- Control de tamaño para las X -->
+                <div class="size-controls no-print">
+                    <label>Tamaño de X:</label>
+                    <input type="range" class="size-slider" id="sizeSliderB" min="3" max="20" value="5" onchange="updateXSize('puntoChoqueB', this.value)">
+                    <span id="sizeValueB">5px</span>
+                </div>
+                
+                <div class="drawing-container">
+                    <div class="canvas-container">
+                        <canvas id="puntoChoqueB" width="300" height="75" class="impact-canvas"></canvas>
+                    </div>
+                    <div class="canvas-controls no-print">
+                        <button type="button" class="btn-danger" onclick="clearCanvas('puntoChoqueB')">Limpiar X</button>
+                        <button type="button" class="btn-success" onclick="activateTool('puntoChoqueB', 'x')">Añadir X</button>
+                    </div>
+                </div>
+                
+                <div class="subtitle">16. Daños apreciados al vehículo B:</div>
+                <textarea class="input-field" name="vehiculo_b_danos" placeholder="Describa los daños..."></textarea>
+            </div>
+        </div>
+        
+        <!-- Sección 17: Circunstancias -->
+        <div class="section-title">17. CIRCUNSTANCIAS</div>
+        <p> Poner una (x) en cada casilla que proceda para precisar el croquis</p>
+        
+        <div class="circunstancias-mejoradas">
+            <!-- Columna izquierda -->
+            <div class="circunstancias-columna-mejorada">
+                <div class="circunstancias-header">
+                    <span>A</span>
+                    <span>B</span>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_estacionado">
+                    </div>
+                    <label>Estaba estacionado/parado</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_estacionado">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_salida_estacionamiento">
+                    </div>
+                    <label>Salía de estacionamiento/abriendo puerta</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_salida_estacionamiento">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_estacionar">
+                    </div>
+                    <label>Iba a estacionar</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_estacionar">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_salida_privado">
+                    </div>
+                    <label>Salía de lugar privado/camino tierra</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_salida_privado">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_entrada_privado">
+                    </div>
+                    <label>Entraba a lugar privado/camino tierra</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_entrada_privado">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_entrada_rotonda">
+                    </div>
+                    <label>Entraba a plaza sentido giratorio</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_entrada_rotonda">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_circulaba_rotonda">
+                    </div>
+                    <label>Circulaba por plaza sentido giratorio</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_circulaba_rotonda">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_colision_atras">
+                    </div>
+                    <label>Colisionó por detrás mismo carril</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_colision_atras">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Columna derecha -->
+            <div class="circunstancias-columna-mejorada">
+                <div class="circunstancias-header">
+                    <span>A</span>
+                    <span>B</span>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_mismo_sentido">
+                    </div>
+                    <label>Mismo sentido, carril diferente</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_mismo_sentido">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_cambiaba_carril">
+                    </div>
+                    <label>Cambiaba de carril</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_cambiaba_carril">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_adelantaba">
+                    </div>
+                    <label>Adelantaba</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_adelantaba">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_giraba_derecha">
+                    </div>
+                    <label>Giraba a la derecha</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_giraba_derecha">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_giraba_izquierda">
+                    </div>
+                    <label>Giraba a la izquierda</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_giraba_izquierda">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_marcha_atras">
+                    </div>
+                    <label>Daba marcha atrás</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_marcha_atras">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_invadia_sentido_inverso">
+                    </div>
+                    <label>Invadía sentido inverso</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_invadia_sentido_inverso">
+                    </div>
+                </div>
+                <div class="circunstancias-fila">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_a_via_derecha">
+                    </div>
+                    <label>Venía de la derecha (cruce)</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="circunstancia_b_via_derecha">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ÚLTIMA FILA ESPECIAL - OCUPA AMBAS COLUMNAS -->
+            <div class="circunstancias-fila-especial">
+                <div class="checkbox-group">
+                    <input type="checkbox" name="circunstancia_a_no_respeto_preferencia">
+                </div>
+                <label>No respetó la señal de preferencia o semáforo en rojo</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="circunstancia_b_no_respeto_preferencia">
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Sección 18: Croquis -->
+        <div class="section-title">18. Croquis del accidente (en el momento de la colisión)</div>
+        <div class="drawing-container">
+            <!-- Paleta de colores -->
+            <div class="color-palette no-print">
+                <div class="color-option active" style="background-color: #000000;" data-color="#000000" onclick="setColor('croquis', '#000000')"></div>
+                <div class="color-option" style="background-color: #3b82f6;" data-color="#3b82f6" onclick="setColor('croquis', '#3b82f6')"></div>
+                <div class="color-option" style="background-color: #ef4444;" data-color="#ef4444" onclick="setColor('croquis', '#ef4444')"></div>
+                <div class="color-option" style="background-color: #10b981;" data-color="#10b981" onclick="setColor('croquis', '#10b981')"></div>
+            </div>
+            
+            <div class="canvas-container croquis-container">
+                <div id="croquisInstructions" class="drawing-instructions">
+                    Dibuje aquí el croquis del accidente<br>
+                    • Dibuje los vehículos, calles y señales<br>
+                    • Use flechas para indicar dirección<br>
+                    (Use el ratón o el dedo para dibujar)
+                </div>
+                <canvas id="croquis" width="600" height="150" style="width: 100%; height: 100%;"></canvas>
+            </div>
+            <div class="canvas-controls no-print">
+                <button type="button" id="btn-draw-croquis" class="tool-active" onclick="activateTool('croquis', 'draw')">✏️ Dibujar</button>
+                <button type="button" id="btn-arrow-croquis" onclick="activateTool('croquis', 'arrow')">➡️ Flecha</button>
+                <button type="button" id="btn-rectangle-croquis" onclick="activateTool('croquis', 'rectangle')">⬜ Rectángulo</button>
+                <button type="button" id="btn-circle-croquis" onclick="activateTool('croquis', 'circle')">⭕ Círculo</button>
+                <button type="button" id="btn-text-croquis" onclick="activateTool('croquis', 'text')">🔤 Texto</button>
+                <button type="button" class="btn-danger" onclick="clearCanvas('croquis')">🗑️ Limpiar</button>
+            </div>
+        </div>
+        
+        <!-- Sección 19: Firmas -->
+        <div class="section-title">19. Firmas de los conductores</div>
+        <div class="signature-area">
+            <div class="signature-box">
+                <p><strong>Firma del conductor A</strong></p>
+                <div class="canvas-container">
+                    <div id="signatureAInstructions" class="drawing-instructions">
+                        Firma del conductor A<br>
+                        (Use el ratón o el dedo para firmar)
+                    </div>
+                    <canvas id="signatureA" width="300" height="60" style="border: 1px dashed #d1d5db; background: #f9fafb; width: 100%;"></canvas>
+                </div>
+                <div class="canvas-controls no-print">
+                    <button type="button" class="btn-danger" onclick="clearCanvas('signatureA')">Limpiar Firma A</button>
+                </div>
+            </div>
+            <div class="signature-box">
+                <p><strong>Firma del conductor B</strong></p>
+                <div class="canvas-container">
+                    <div id="signatureBInstructions" class="drawing-instructions">
+                        Firma del conductor B<br>
+                        (Use el ratón o el dedo para firmar)
+                    </div>
+                    <canvas id="signatureB" width="300" height="60" style="border: 1px dashed #d1d5db; background: #f9fafb; width: 100%;"></canvas>
+                </div>
+                <div class="canvas-controls no-print">
+                    <button type="button" class="btn-danger" onclick="clearCanvas('signatureB')">Limpiar Firma B</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="btn-container no-print">
+            <button type="button" id="btn-guardar" class="btn-success" onclick="guardarParte()">Guardar Parte</button>
+            <button type="button" id="btn-imprimir" class="btn-primary" onclick="imprimirParte()">Imprimir Parte</button>
+            <button type="button" id="btn-generar-pdf" class="btn-danger" onclick="generarPDF()">Generar PDF</button>
+            <button type="button" id="btn-limpiar" class="btn-danger" onclick="limpiarFormulario()">Limpiar Formulario</button>
+        </div>
+    </div>
+
+    <script>
+        // =============================================
+        // ===== CÓDIGO JAVASCRIPT CON IMÁGENES =====
+        // =============================================
+
+        // Configuración global para los canvas
+        const canvasConfig = {
+            'signatureA': { drawing: false, color: '#000000', lineWidth: 2 },
+            'signatureB': { drawing: false, color: '#000000', lineWidth: 2 },
+            'croquis': { drawing: false, color: '#000000', lineWidth: 2, mode: 'draw' },
+            'puntoChoqueA': { 
+                drawing: false, 
+                color: '#ef4444', 
+                lineWidth: 2, 
+                mode: 'x', 
+                xSize: 5, 
+                vehicleType: 'car',
+                shapes: []
+            },
+            'puntoChoqueB': { 
+                drawing: false, 
+                color: '#ef4444', 
+                lineWidth: 2, 
+                mode: 'x', 
+                xSize: 5, 
+                vehicleType: 'car',
+                shapes: []
+            }
+        };
+
+        // Imágenes de vehículos
+        const vehicleImages = {
+            'car': null,
+            'motorcycle': null,
+            'other': null
+        };
+
+        // Cargar imágenes de vehículos
+        function loadVehicleImages() {
+            const imagePaths = {
+                'car': '/static/images/car.png',
+                'motorcycle': '/static/images/motorcycle.png',
+                'other': '/static/images/other.png'
+            };
+
+            const promises = [];
+            
+            for (const [type, path] of Object.entries(imagePaths)) {
+                const img = new Image();
+                vehicleImages[type] = img;
+                
+                const promise = new Promise((resolve) => {
+                    img.onload = () => {
+                        console.log(`✓ Imagen cargada: ${path}`);
+                        resolve();
+                    };
+                    
+                    img.onerror = () => {
+                        console.warn(`✗ No se pudo cargar: ${path}`);
+                        // Crear imagen de respaldo
+                        vehicleImages[type] = createFallbackImage(type);
+                        resolve();
+                    };
+                });
+                
+                promises.push(promise);
+                img.src = path;
+            }
+            
+            return Promise.all(promises);
+        }
+
+        // Crear imagen de respaldo
+        function createFallbackImage(type) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 300;
+            canvas.height = 75;
+            const ctx = canvas.getContext('2d');
+            
+            ctx.fillStyle = '#f8fafc';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.strokeStyle = '#cbd5e1';
+            ctx.lineWidth = 1;
+            ctx.strokeRect(5, 5, canvas.width-10, canvas.height-10);
+            
+            ctx.fillStyle = '#64748b';
+            ctx.font = 'bold 10px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(`Vehículo ${type.toUpperCase()}`, canvas.width/2, canvas.height/2);
+            
+            ctx.font = '7px Arial';
+            ctx.fillText('(Imagen no disponible)', canvas.width/2, canvas.height/2 + 8);
+            
+            return canvas;
+        }
+
+        // Dibujar imagen del vehículo en el canvas
+        function drawVehicleImage(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const vehicleType = canvasConfig[canvasId].vehicleType;
+            
+            if (!vehicleType || !vehicleImages[vehicleType]) return;
+            
+            // Limpiar canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const img = vehicleImages[vehicleType];
+            const TAMANO_IMAGEN = 1.9;
+            
+            try {
+                if (img instanceof HTMLImageElement) {
+                    if (img.complete && img.naturalHeight !== 0) {
+                        ctx.save();
+                        ctx.translate(canvas.width / 2, canvas.height / 2);
+                        ctx.rotate(Math.PI / 2);
+                        
+                        const scaleX = (canvas.width * TAMANO_IMAGEN) / img.width;
+                        const scaleY = (canvas.height * TAMANO_IMAGEN) / img.height;
+                        const scale = Math.min(scaleX, scaleY);
+                        
+                        const width = img.width * scale;
+                        const height = img.height * scale;
+                        
+                        ctx.drawImage(img, -width / 2, -height / 2, width, height);
+                        ctx.restore();
+                    }
+                } else {
+                    // Es un canvas de respaldo
+                    ctx.save();
+                    ctx.translate(canvas.width / 2, canvas.height / 2);
+                    ctx.rotate(Math.PI / 2);
+                    
+                    const scaleX = (canvas.width * TAMANO_IMAGEN) / img.width;
+                    const scaleY = (canvas.height * TAMANO_IMAGEN) / img.height;
+                    const scale = Math.min(scaleX, scaleY);
+                    
+                    const width = img.width * scale;
+                    const height = img.height * scale;
+                    
+                    ctx.drawImage(img, -width / 2, -height / 2, width, height);
+                    ctx.restore();
+                }
+                
+                // Redibujar las X existentes
+                redrawShapes(canvasId);
+            } catch (error) {
+                console.error(`Error al dibujar vehículo: ${error}`);
+            }
+        }
+
+        // Redibujar formas (X) en los canvas de vehículos
+        function redrawShapes(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            if (canvasConfig[canvasId].shapes) {
+                canvasConfig[canvasId].shapes.forEach(shape => {
+                    if (shape.type === 'x') {
+                        ctx.beginPath();
+                        ctx.moveTo(shape.x - shape.size, shape.y - shape.size);
+                        ctx.lineTo(shape.x + shape.size, shape.y + shape.size);
+                        ctx.moveTo(shape.x + shape.size, shape.y - shape.size);
+                        ctx.lineTo(shape.x - shape.size, shape.y + shape.size);
+                        ctx.strokeStyle = shape.color;
+                        ctx.lineWidth = shape.lineWidth;
+                        ctx.stroke();
+                    }
+                });
+            }
+        }
+
+        // Inicializar todos los canvas cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Inicializando aplicación...');
+            
+            // Cargar imágenes primero
+            loadVehicleImages().then(() => {
+                console.log('Imágenes de vehículos cargadas');
+                
+                // Inicializar firmas
+                setupSignatureCanvas('signatureA');
+                setupSignatureCanvas('signatureB');
+                
+                // Inicializar croquis
+                setupSketchCanvas('croquis');
+                
+                // Inicializar puntos de choque con imágenes
+                setupImpactCanvas('puntoChoqueA');
+                setupImpactCanvas('puntoChoqueB');
+                
+                console.log('Aplicación inicializada correctamente');
+            }).catch(error => {
+                console.error('Error al cargar imágenes:', error);
+            });
+        });
+
+        // ===== FUNCIONES PARA FIRMAS =====
+        function setupSignatureCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Configurar estilo inicial
+            ctx.strokeStyle = canvasConfig[canvasId].color;
+            ctx.lineWidth = canvasConfig[canvasId].lineWidth;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            
+            // Eventos del ratón
+            canvas.addEventListener('mousedown', startDrawing);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', stopDrawing);
+            canvas.addEventListener('mouseout', stopDrawing);
+            
+            // Eventos táctiles
+            canvas.addEventListener('touchstart', handleTouch);
+            canvas.addEventListener('touchmove', handleTouch);
+            canvas.addEventListener('touchend', stopDrawing);
+            
+            function startDrawing(e) {
+                canvasConfig[canvasId].drawing = true;
+                const coords = getCoordinates(e, canvas);
+                ctx.beginPath();
+                ctx.moveTo(coords.x, coords.y);
+                
+                // Ocultar instrucciones
+                document.getElementById(canvasId + 'Instructions').classList.add('hidden');
+                
+                e.preventDefault();
+            }
+            
+            function draw(e) {
+                if (!canvasConfig[canvasId].drawing) return;
+                
+                const coords = getCoordinates(e, canvas);
+                ctx.lineTo(coords.x, coords.y);
+                ctx.stroke();
+                
+                e.preventDefault();
+            }
+            
+            function stopDrawing() {
+                canvasConfig[canvasId].drawing = false;
+                ctx.beginPath();
+            }
+            
+            function handleTouch(e) {
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent(e.type === 'touchstart' ? 'mousedown' : 'mousemove', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+                e.preventDefault();
+            }
+        }
+
+        // ===== FUNCIONES PARA CROQUIS =====
+        function setupSketchCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Configurar estilo inicial
+            ctx.strokeStyle = canvasConfig[canvasId].color;
+            ctx.lineWidth = canvasConfig[canvasId].lineWidth;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            
+            let startX, startY;
+            
+            // Eventos del ratón
+            canvas.addEventListener('mousedown', startDrawing);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', stopDrawing);
+            canvas.addEventListener('mouseout', stopDrawing);
+            
+            // Eventos táctiles
+            canvas.addEventListener('touchstart', handleTouchStart);
+            canvas.addEventListener('touchmove', handleTouchMove);
+            canvas.addEventListener('touchend', stopDrawing);
+            
+            function startDrawing(e) {
+                canvasConfig[canvasId].drawing = true;
+                const coords = getCoordinates(e, canvas);
+                startX = coords.x;
+                startY = coords.y;
+                
+                if (canvasConfig[canvasId].mode === 'draw') {
+                    ctx.beginPath();
+                    ctx.moveTo(coords.x, coords.y);
+                }
+                
+                // Ocultar instrucciones
+                document.getElementById(canvasId + 'Instructions').classList.add('hidden');
+                
+                e.preventDefault();
+            }
+            
+            function draw(e) {
+                if (!canvasConfig[canvasId].drawing) return;
+                
+                const coords = getCoordinates(e, canvas);
+                
+                if (canvasConfig[canvasId].mode === 'draw') {
+                    ctx.lineTo(coords.x, coords.y);
+                    ctx.stroke();
+                }
+                
+                e.preventDefault();
+            }
+            
+            function stopDrawing(e) {
+                if (!canvasConfig[canvasId].drawing) return;
+                
+                const coords = getCoordinates(e, canvas);
+                
+                if (canvasConfig[canvasId].mode === 'arrow') {
+                    drawArrow(startX, startY, coords.x, coords.y);
+                } else if (canvasConfig[canvasId].mode === 'rectangle') {
+                    ctx.strokeRect(startX, startY, coords.x - startX, coords.y - startY);
+                } else if (canvasConfig[canvasId].mode === 'circle') {
+                    const radius = Math.sqrt(Math.pow(coords.x - startX, 2) + Math.pow(coords.y - startY, 2));
+                    ctx.beginPath();
+                    ctx.arc(startX, startY, radius, 0, Math.PI * 2);
+                    ctx.stroke();
+                } else if (canvasConfig[canvasId].mode === 'text') {
+                    const text = prompt('Introduzca el texto:');
+                    if (text) {
+                        ctx.font = '12px Arial';
+                        ctx.fillText(text, startX, startY);
+                    }
+                }
+                
+                canvasConfig[canvasId].drawing = false;
+                e.preventDefault();
+            }
+            
+            function drawArrow(fromX, fromY, toX, toY) {
+                const headlen = 10;
+                const angle = Math.atan2(toY - fromY, toX - fromX);
+                
+                // Línea principal
+                ctx.beginPath();
+                ctx.moveTo(fromX, fromY);
+                ctx.lineTo(toX, toY);
+                ctx.stroke();
+                
+                // Punta de flecha
+                ctx.beginPath();
+                ctx.moveTo(toX, toY);
+                ctx.lineTo(toX - headlen * Math.cos(angle - Math.PI/6), toY - headlen * Math.sin(angle - Math.PI/6));
+                ctx.lineTo(toX - headlen * Math.cos(angle + Math.PI/6), toY - headlen * Math.sin(angle + Math.PI/6));
+                ctx.closePath();
+                ctx.fill();
+            }
+            
+            function handleTouchStart(e) {
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent('mousedown', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+                e.preventDefault();
+            }
+            
+            function handleTouchMove(e) {
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent('mousemove', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+                e.preventDefault();
+            }
+        }
+
+        // ===== FUNCIONES PARA PUNTOS DE CHOQUE =====
+        function setupImpactCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Dibujar imagen del vehículo
+            drawVehicleImage(canvasId);
+            
+            // Configurar eventos para añadir X
+            canvas.addEventListener('click', function(e) {
+                if (canvasConfig[canvasId].mode === 'x') {
+                    const coords = getCoordinates(e, canvas);
+                    
+                    // Dibujar X
+                    ctx.beginPath();
+                    ctx.moveTo(coords.x - canvasConfig[canvasId].xSize, coords.y - canvasConfig[canvasId].xSize);
+                    ctx.lineTo(coords.x + canvasConfig[canvasId].xSize, coords.y + canvasConfig[canvasId].xSize);
+                    ctx.moveTo(coords.x + canvasConfig[canvasId].xSize, coords.y - canvasConfig[canvasId].xSize);
+                    ctx.lineTo(coords.x - canvasConfig[canvasId].xSize, coords.y + canvasConfig[canvasId].xSize);
+                    ctx.strokeStyle = canvasConfig[canvasId].color;
+                    ctx.lineWidth = canvasConfig[canvasId].lineWidth;
+                    ctx.stroke();
+                    
+                    // Guardar la X
+                    canvasConfig[canvasId].shapes.push({
+                        type: 'x',
+                        x: coords.x,
+                        y: coords.y,
+                        color: canvasConfig[canvasId].color,
+                        lineWidth: canvasConfig[canvasId].lineWidth,
+                        size: canvasConfig[canvasId].xSize
+                    });
+                }
+            });
+        }
+
+        // ===== FUNCIONES UTILITARIAS =====
+        function getCoordinates(e, canvas) {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            
+            let clientX, clientY;
+            
+            if (e.type.includes('touch')) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+            
+            return {
+                x: (clientX - rect.left) * scaleX,
+                y: (clientY - rect.top) * scaleY
+            };
+        }
+
+        function clearCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Si es un canvas de vehículos, redibujar la imagen
+            if (canvasId === 'puntoChoqueA' || canvasId === 'puntoChoqueB') {
+                canvasConfig[canvasId].shapes = [];
+                drawVehicleImage(canvasId);
+            }
+            
+            // Mostrar instrucciones
+            const instructions = document.getElementById(canvasId + 'Instructions');
+            if (instructions) {
+                instructions.classList.remove('hidden');
+            }
+        }
+
+        function setColor(canvasId, color) {
+            canvasConfig[canvasId].color = color;
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            
+            // Actualizar paleta de colores
+            document.querySelectorAll('.color-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        function activateTool(canvasId, tool) {
+            canvasConfig[canvasId].mode = tool;
+            
+            // Actualizar botones activos
+            const controls = document.querySelector(`#${canvasId}`).closest('.drawing-container').querySelector('.canvas-controls');
+            controls.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('tool-active');
+            });
+            event.target.classList.add('tool-active');
+        }
+
+        function selectVehicle(canvasId, vehicleType) {
+            canvasConfig[canvasId].vehicleType = vehicleType;
+            
+            // Actualizar selector visual
+            const selector = event.target.parentNode;
+            selector.querySelectorAll('.vehicle-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Redibujar el canvas con la nueva imagen
+            drawVehicleImage(canvasId);
+        }
+
+        function updateXSize(canvasId, size) {
+            canvasConfig[canvasId].xSize = parseInt(size);
+            document.getElementById('sizeValue' + canvasId.slice(-1)).textContent = size + 'px';
+        }
+
+        // ===== FUNCIONES DEL FORMULARIO =====
+        function guardarParte() {
+            alert('Parte guardado correctamente. En una aplicación real, los datos se enviarían al servidor.');
+        }
+
+        function limpiarFormulario() {
+            if (confirm('¿Está seguro de que desea limpiar todo el formulario?')) {
+                // Limpiar inputs
+                document.querySelectorAll('input, textarea').forEach(element => {
+                    if (element.type !== 'button') {
+                        element.value = '';
+                    }
+                });
+                
+                // Limpiar checkboxes
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+                
+                // Limpiar canvas
+                ['signatureA', 'signatureB', 'puntoChoqueA', 'puntoChoqueB', 'croquis'].forEach(clearCanvas);
+                
+                // Restablecer configuraciones
+                activateTool('croquis', 'draw');
+                setColor('croquis', '#000000');
+            }
+        }
+
+        function imprimirParte() {
+            window.print();
+        }
+
+        async function generarPDF() {
+            try {
+                const element = document.getElementById('content-to-print');
+                
+                // Ocultar controles
+                const noPrintElements = element.querySelectorAll('.no-print');
+                noPrintElements.forEach(el => el.style.display = 'none');
+                
+                const canvas = await html2canvas(element, {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false
+                });
+                
+                // Restaurar controles
+                noPrintElements.forEach(el => el.style.display = '');
+                
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF({
+                    orientation: 'portrait',
+                    unit: 'mm',
+                    format: 'a4'
+                });
+                
+                const imgData = canvas.toDataURL('image/jpeg', 0.92);
+                const imgWidth = 190;
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                
+                pdf.addImage(imgData, 'JPEG', 10, 10, imgWidth, imgHeight);
+                pdf.save('declaracion_amistosa_accidente.pdf');
+                 
+            } catch (error) {
+                console.error('Error al generar PDF:', error);
+                alert('Error al generar el PDF. Intente nuevamente.');
+            }
+        }
+    </script>
+</body>
+</html>
