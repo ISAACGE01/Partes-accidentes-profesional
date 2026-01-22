@@ -1,0 +1,22 @@
+@media print {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .parte-container {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .input-field {
+        border: none !important;
+        background: transparent !important;
+    }
+}
